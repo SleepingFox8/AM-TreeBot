@@ -15,6 +15,6 @@ TreeBot is a minecraft bot written for [advanced macros mod](https://www.cursefo
 
 - Make sure you have a diamond axe in your inventory with over 50 durability, food, and enough birch or oak sapplings in your inventory to replant all the trees in your farm.
 
-- Stand 2 blocks west from the south west most tree in your farm.
+- Stand 2 blocks west from the south-west most tree in your farm.
 
 - Run ``harvestTrees.lua``
