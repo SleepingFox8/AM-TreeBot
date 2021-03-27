@@ -11,7 +11,7 @@ TreeBot is a minecraft bot written for [advanced macros mod](https://www.cursefo
 
 ## Usage
 
-- In ``harvestTrees.lua`` assign ``Xtrees``, ``Ztrees``, ``Xspacing`` and ``Zspacing`` in the ``treeBot.harvestTrees(Xtrees,Ztrees, Xspacing,Zspacing)`` function call.
+- In ``harvestTrees.lua`` assign arguments to the ``treeBot.harvestTrees(Xtrees,Ztrees, Xspacing,Zspacing)`` function call.
 
   - ``Xtrees`` being the number of trees east-west
   - ``Ztrees`` being the number of trees north-south
