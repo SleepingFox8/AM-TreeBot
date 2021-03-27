@@ -99,7 +99,8 @@
                 FUNC.xsize, FUNC.zsize = xsize, zsize
 
         -- initialize variables
-            SCRIPT.interval = 5
+            SCRIPT.xInterval = 5
+            SCRIPT.zInterval = 5
             SCRIPT.xsize = FUNC.xsize
             SCRIPT.zsize = FUNC.zsize
             SCRIPT.topbreaktimer = 70
@@ -282,12 +283,12 @@
                         botTools.eatIfHungery()
 
                         --set new target
-                            FUNC.targx = FUNC.targx + (SCRIPT.interval * (SCRIPT.direction * -1))
+                            FUNC.targx = FUNC.targx + (SCRIPT.xInterval * (SCRIPT.direction * -1))
                             FUNC.xloc = FUNC.xloc + (SCRIPT.direction * -1)
                     end
                 --set new target
-                    FUNC.targx = FUNC.targx - (SCRIPT.interval * (SCRIPT.direction * -1))
-                    FUNC.targz = FUNC.targz - SCRIPT.interval
+                    FUNC.targx = FUNC.targx - (SCRIPT.xInterval * (SCRIPT.direction * -1))
+                    FUNC.targz = FUNC.targz - SCRIPT.zInterval
                     FUNC.zloc = FUNC.zloc + 1
                 -- offload Wood
                     look(25,0)
