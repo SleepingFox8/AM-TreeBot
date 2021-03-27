@@ -4,7 +4,9 @@ TreeBot is a minecraft bot written for [advanced macros mod](https://www.cursefo
 
 ## Farm Setup
 
-- Trees should be in a retangular grid of any size, with 4 block of air in between every sappling.
+![](https://i.imgur.com/3iJRHJ4.jpg)
+
+- Trees should be in a retangular grid of any size, with (ideally 4 but can be different) blocks of air in between every sappling.
 - east-west walkways should make it so the player can walk between every tree.
 - north-south walkways should allow the player to walk between the west most and east most trees in your tree farm, so the bot can change east-west rows after completing a row.
 - A water collection system should be put under the walkways. Allowing for the collection of sapplings and logs that the bot will drop into the water.
