@@ -91,16 +91,16 @@
         end
     end
 
-    function treeBot.harvestTrees(xsize, zsize)
+    function treeBot.harvestTrees(xsize, zsize, xspacing, zspacing)
         --function initialization
             --initialize function table
                 local FUNC = {}
             --store arguments in locally scoped table for scope safety
                 FUNC.xsize, FUNC.zsize = xsize, zsize
+                SCRIPT.xInterval = xspacing + 1
+                SCRIPT.zInterval = zspacing + 1
 
         -- initialize variables
-            SCRIPT.xInterval = 5
-            SCRIPT.zInterval = 5
             SCRIPT.xsize = FUNC.xsize
             SCRIPT.zsize = FUNC.zsize
             SCRIPT.topbreaktimer = 70

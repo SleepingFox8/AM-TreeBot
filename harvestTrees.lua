@@ -24,6 +24,6 @@
         end
 
     log("Harvesting trees")
-    treeBot.harvestTrees(41,36)
+    treeBot.harvestTrees(41,36, 4,4)
     log("Finished harvesting Trees")
     botTools.disconnectIfAfkForTenSeconds()
