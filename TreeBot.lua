@@ -91,15 +91,16 @@
         end
     end
 
-    function treeBot.harvestTrees(xsize, zsize)
+    function treeBot.harvestTrees(xsize, zsize, xspacing, zspacing)
         --function initialization
             --initialize function table
                 local FUNC = {}
             --store arguments in locally scoped table for scope safety
                 FUNC.xsize, FUNC.zsize = xsize, zsize
+                SCRIPT.xInterval = xspacing + 1
+                SCRIPT.zInterval = zspacing + 1
 
         -- initialize variables
-            SCRIPT.interval = 5
             SCRIPT.xsize = FUNC.xsize
             SCRIPT.zsize = FUNC.zsize
             SCRIPT.topbreaktimer = 70
@@ -282,12 +283,12 @@
                         botTools.eatIfHungery()
 
                         --set new target
-                            FUNC.targx = FUNC.targx + (SCRIPT.interval * (SCRIPT.direction * -1))
+                            FUNC.targx = FUNC.targx + (SCRIPT.xInterval * (SCRIPT.direction * -1))
                             FUNC.xloc = FUNC.xloc + (SCRIPT.direction * -1)
                     end
                 --set new target
-                    FUNC.targx = FUNC.targx - (SCRIPT.interval * (SCRIPT.direction * -1))
-                    FUNC.targz = FUNC.targz - SCRIPT.interval
+                    FUNC.targx = FUNC.targx - (SCRIPT.xInterval * (SCRIPT.direction * -1))
+                    FUNC.targz = FUNC.targz - SCRIPT.zInterval
                     FUNC.zloc = FUNC.zloc + 1
                 -- offload Wood
                     look(25,0)
