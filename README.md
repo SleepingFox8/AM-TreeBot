@@ -18,7 +18,7 @@ TreeBot is a minecraft bot written for [advanced macros mod](https://www.cursefo
   - ``Xspacing`` being the number of east-west air blocks between each tree.
   - ``Zspacing`` being the number of north-south air blocks between each tree.
 
-- Make sure you have a diamond axe in your inventory with over 50 durability, food, and enough birch or oak sapplings in your inventory to replant all the trees in your farm.
+- Make sure your inventory contains a diamond axe with over 50 durability, food, and enough birch or oak sapplings to replant all the trees in your farm.
 
 - Stand 2 blocks west from the south-west most tree in your farm.
 
