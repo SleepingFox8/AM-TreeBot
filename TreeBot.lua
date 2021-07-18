@@ -1,7 +1,14 @@
 -- initialization
+    -- ensure imports are from file instead of cache
+        local function import(path)
+            package.loaded[path] = nil
+            local imported = require (path)
+            package.loaded[path] = nil
+            return imported
+        end
     -- import denendencies
-        local botTools = require ("AM-Tools/botTools")
-        local compTools = require ("AM-Tools/compTools")
+        local botTools = import("AM-Tools/botTools")
+        local compTools = import("AM-Tools/compTools")
 
     -- prepair table for holding exported functions
         local treeBot = { _version = "0.0.0" }
