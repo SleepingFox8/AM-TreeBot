@@ -7,8 +7,8 @@
             return imported
         end
     -- import denendencies
-        local botTools = import("./AM-Tools/botTools")
-        local compTools = import("./AM-Tools/compTools")
+        local botTools = import("./AM-BotTools/botTools")
+        local compTools = import("./AM-CompTools/compTools")
         local treeBot = import("./TreeBot")
 
     --initialize GLBL table if needed

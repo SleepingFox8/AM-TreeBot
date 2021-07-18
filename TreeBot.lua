@@ -7,8 +7,8 @@
             return imported
         end
     -- import denendencies
-        local botTools = import("AM-Tools/botTools")
-        local compTools = import("AM-Tools/compTools")
+        local botTools = import("AM-BotTools/botTools")
+        local compTools = import("AM-CompTools/compTools")
 
     -- prepair table for holding exported functions
         local treeBot = { _version = "0.0.0" }
