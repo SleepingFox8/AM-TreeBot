@@ -1,8 +1,15 @@
 -- initialization
+    -- ensure imports are from file instead of cache
+        local function import(path)
+            package.loaded[path] = nil
+            local imported = require (path)
+            package.loaded[path] = nil
+            return imported
+        end
     -- import denendencies
-        local botTools = require ("./AM-Tools/botTools")
-        local compTools = require ("./AM-Tools/compTools")
-        local treeBot = require("./TreeBot")
+        local botTools = import("./AM-BotTools/botTools")
+        local compTools = import("./AM-CompTools/compTools")
+        local treeBot = import("./TreeBot")
 
     --initialize GLBL table if needed
         if GLBL == nil then

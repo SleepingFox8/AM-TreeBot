@@ -1,3 +1,6 @@
-[submodule "AM-Tools"]
-	path = AM-Tools
-	url = https://github.com/SleepingFox8/AM-Tools
+[submodule "AM-BotTools"]
+	path = AM-BotTools
+	url = https://github.com/SleepingFox8/AM-BotTools
+[submodule "AM-CompTools"]
+	path = AM-CompTools
+	url = https://github.com/SleepingFox8/AM-CompTools
