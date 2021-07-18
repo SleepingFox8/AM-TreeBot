@@ -286,8 +286,7 @@
                                     FUNC.treeHarvested = true
                                 end
                             end
-                        
-                        botTools.eatIfHungery()
+                        botTools.eatIfHungry()
 
                         --set new target
                             FUNC.targx = FUNC.targx + (SCRIPT.xInterval * (SCRIPT.direction * -1))
