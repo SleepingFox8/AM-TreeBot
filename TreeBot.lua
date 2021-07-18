@@ -22,6 +22,15 @@
     --Stores global variables for just this script
         local SCRIPT = {}
 
+    -- Assign script wide variables
+
+        -- listOfSapplings
+            SCRIPT.listOfSaplings = {}
+            table.insert(SCRIPT.listOfSaplings, "minecraft:birch_sapling")
+            table.insert(SCRIPT.listOfSaplings, "minecraft:oak_sapling")
+            table.insert(SCRIPT.listOfSaplings, "minecraft:spruce_sapling")
+            table.insert(SCRIPT.listOfSaplings, "minecraft:jungle_sapling")
+
 -- function declarations
     local function axeDurabilityOk()
         --function initialization
@@ -62,7 +71,7 @@
                 FUNC.timerName, FUNC.ms = timerName, ms
 
         SCRIPT.timerStartTime[FUNC.timerName] = os.time()
-        SCRIPT.timerDuration[FUNC.timerName] = ms
+        SCRIPT.timerDuration[FUNC.timerName] = FUNC.ms
     end
 
     local function haveTime(timerName)
@@ -270,8 +279,17 @@
                                 if botHasNotFallen() and ((FUNC.pX == FUNC.targx) and (FUNC.pZ == FUNC.targz)) then
                                     --replant sappling
                                         --grab sappling
-                                            botTools.summonItem("minecraft:birch_sapling",3)
-                                            botTools.summonItem("minecraft:oak_sapling",3)
+                                            for i,j in pairs(SCRIPT.listOfSaplings) do
+                                                -- store args in known scope safe table
+                                                    FUNC.sapling = j
+
+                                                if botTools.itemInInventory(FUNC.sapling) then
+                                                    botTools.summonItem(FUNC.sapling, 3)
+                                                    break
+                                                end
+
+                                                -- currently just continues if no sapplings are found.
+                                            end
                                         --look straight down
                                             FUNC.player = getPlayer()
                                             look(FUNC.player.yaw,90)
